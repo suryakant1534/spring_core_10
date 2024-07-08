@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+    <bean class="com.spring.bean_post_process.BeanPostProcess"/>
+
+    <bean class="com.spring.utils.DatabaseHelper" scope="singleton"/>
+
+    <bean class="com.spring.model.Employee" id="employee" scope="prototype"/>
+
+    <bean class="com.spring.service.Service" autowire="constructor"/>
+
+    <bean class="com.spring.controller.Controller" id="controller" autowire="constructor"/>
+
+</beans>
